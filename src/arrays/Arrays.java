@@ -39,9 +39,11 @@ public class Arrays {
             return arr;
         }
         
-        for(int i = index; i < size; i ++){
+        for(int i = index; i < size - 1; i ++){
             arr[i] = arr[i + 1];
         }
+
+        arr[size - 1] = 0;
         return arr;
     }
     
