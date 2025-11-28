@@ -31,8 +31,20 @@ Students will learn to:
 
 This repository corresponds to the recorded lecture:
 
-**Arrays in Java – DS Lab Lecture (Maryam Skaik)**
-Add the YouTube link here after uploading.
+**[DS Lab: Arrays in Java – Insertion & Deletion Explained]**(https://www.youtube.com/watch?v=rMp0cFD1jcI)
+
+---
+
+## 📂 Additional Chapter
+The file [`Lecture 01 - Arrays.pdf`](src/arrays/Lecture 01 - Arrays.pdf) contains extra slides/examples used in the lecture video to illustrate basic array concepts:
+
+- What is an Array?
+- Features of Arrays
+- Advantages
+- Limitations
+- Example snippets
+
+Students are encouraged to review and run it alongside `Arrays.java` for practice.
 
 ---
 
