@@ -31,12 +31,12 @@ Students will learn to:
 
 This repository corresponds to the recorded lecture:
 
-**[DS Lab: Arrays in Java – Insertion & Deletion Explained]**(https://www.youtube.com/watch?v=rMp0cFD1jcI)
+[DS Lab: Arrays in Java – Insertion & Deletion Explained](https://www.youtube.com/watch?v=rMp0cFD1jcI)
 
 ---
 
 ## 📂 Additional Chapter
-The file [`Lecture 01 - Arrays.pdf`](src/arrays/Lecture 01 - Arrays.pdf) contains extra slides/examples used in the lecture video to illustrate basic array concepts:
+The file [Lecture 01 - Arrays.pdf](src/arrays/Lecture%2001%20-%20Arrays.pdf) contains extra slides/examples used in the lecture video to illustrate basic array concepts:
 
 - What is an Array?
 - Features of Arrays
