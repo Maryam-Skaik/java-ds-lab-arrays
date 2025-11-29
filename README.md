@@ -54,7 +54,8 @@ Students are encouraged to review and run it alongside `Arrays.java` for practic
 java-ds-lab-arrays/
 │
 ├── src/arrays/
-│   └── Arrays.java          # Demonstration of insertion/deletion using shifting
+│   ├── Arrays.java              # Demonstration of insertion/deletion using shifting
+│   └── Lecture 01 - Arrays.pdf  # Chapter used in the lecture
 │
 └── README.md
 ```
