@@ -1,3 +1,5 @@
+package activities;
+
 /**
  * Problem: Find the largest and smallest elements in an array, 
  * along with the indices where they appear.
@@ -14,20 +16,25 @@
  *
  * This problem was given at the end of Lecture 01 – Arrays.
  */
-package activities;
-
 /**
  *
  * @author Maryam
  */
 public class LargestandSmallest {
+
+    /**
+     * Finds and prints largest and smallest elements and their indices.
+     * Assumes arr.length > 0.
+     */
     
     public static void findLargestandSmallest(int arr[]){
+        // Initialize with first element so negatives are handled correctly.
         int largest = arr[0];
         int smallest = arr[0];
         int largestIndex = 0;
         int smallestIndex = 0;
-        
+
+        // Single pass from index 1 to end
         for(int i = 1; i < arr.length; i++){
             if(arr[i] > largest){
                 largest = arr[i];
