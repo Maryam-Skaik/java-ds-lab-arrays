@@ -7,10 +7,10 @@
 ![Level](https://img.shields.io/badge/Level-Beginner%20%2F%20Intro-%2381c784)
 ![Purpose](https://img.shields.io/badge/Purpose-Teaching-%234fc3f7)
 
-This repository contains all example code used in the Arrays lecture of the Data Structures Lab.
-The module focuses on understanding how arrays work in contiguous memory, and why insertion and deletion require shifting elements.
+This repository contains all example code, lecture material, and student activities for the **Arrays Module** of the Java Data Structures Lab.  
+The module focuses on understanding how arrays store data in contiguous memory, and why operations such as insertion and deletion require **shifting elements**.
 
-This foundational material prepares students for the upcoming topics: Linked Lists, Stacks, Queues, Trees, BSTs, and Sorting.
+This content prepares students for upcoming structures: **Linked Lists, Stacks, Queues, Trees, BSTs, and Sorting**.
 
 ---
 
@@ -18,12 +18,12 @@ This foundational material prepares students for the upcoming topics: Linked Lis
 
 Students will learn to:
 
-- Understand **memory layout** and why array elements are contiguous
-- Use **indexing** to access elements in O(1) time
-- Insert elements using **right-shifting**
-- Delete elements using **left-shifting**
-- Understand the difference between **capacity** and **logical size**
-- Recognize why arrays are inefficient for dynamic changes
+- How arrays occupy **contiguous memory**
+- Why indexing provides **O(1)** access time
+- How to perform **insertion using right-shifting**
+- How to perform **deletion using left-shifting**
+- The difference between **capacity vs. logical size**
+- Why arrays are inefficient for dynamic data changes
 
 ---
 
@@ -35,14 +35,19 @@ This repository corresponds to the recorded lecture:
 
 ---
 
-## 📂 Additional Chapter
-The file [Lecture 01 - Arrays.pdf](src/arrays/Lecture%2001%20-%20Arrays.pdf) contains extra slides/examples used in the lecture video to illustrate basic array concepts:
+## 📚 Lecture Chapter (PDF)
+
+Additional slides used during the lecture:
+**[Lecture 01 - Arrays.pdf](src/arrays/Lecture%2001%20-%20Arrays.pdf)**
+
+Includes:
 
 - What is an Array?
 - Features of Arrays
 - Advantages
 - Limitations
-- Example snippets
+- Example used in lecture  
+- Notes for students
 
 Students are encouraged to review and run it alongside `Arrays.java` for practice.
 
@@ -53,9 +58,19 @@ Students are encouraged to review and run it alongside `Arrays.java` for practic
 ```bash
 java-ds-lab-arrays/
 │
-├── src/arrays/
-│   ├── Arrays.java              # Demonstration of insertion/deletion using shifting
-│   └── Lecture 01 - Arrays.pdf  # Chapter used in the lecture
+├── src/
+│   ├── examples/                 # Lecture example code
+│   │   └── Arrays.java
+│   │
+│   ├── activities/               # Practice problems with solutions
+│   │   ├── LargestandSmallest.java   # Find largest/smallest value and index
+│   │   └── RotateLeft.java            # Rotate array left (shifting + reverse method)
+│   │
+│   └── chapters/                 # Lecture chapters (PDF)
+│       └── Lecture 01 - Arrays.pdf
+│
+├── assignments/                  # Assignment descriptions & future solutions
+│   └── README.md
 │
 └── README.md
 ```
@@ -73,13 +88,31 @@ This enables **O(1) direct access** using the formula:
 address(arr[i]) = base_address + (i * element_size)
 ```
 
-### ✔ Insertion Requires Right-Shifting
+> This provides **constant-time access**.
 
-To insert at any index, all elements from the end down to that index must move right by one position.
+---
 
-### ✔ Deletion Requires Left-Shifting
+### ✔ Manual Shifting for Insertion
 
-To delete an element, all following elements shift left.
+To insert at index i, elements from the end down to i must shift right:
+
+```bash
+Before:  [1, 2, 5, 0, 0]
+Insert 7 at index 1
+Shift →  [1, 2, 2, 5, 0]
+Result → [1, 7, 2, 5, 0]
+```
+
+---
+
+### ✔ Manual Shifting for Deletion
+
+To delete at index i, elements shift left:
+
+```bash
+Before:  [1, 7, 2, 5, 0]
+After →  [1, 2, 5, 0, 0]
+```
 
 ---
 
@@ -160,6 +193,36 @@ This provides a full walkthrough of manual shifting operations.
 
 ---
 
+## 📘 Activities (with Solutions)
+
+The `[activities/](src/activities)` folder includes practice problems solved in class.
+
+### ⭐ Activity 01 – Largest & Smallest Element
+
+File: [src/activities/LargestandSmallest.java](src/activities/LargestandSmallest.java)
+
+Demonstrates:
+
+- Basic traversal
+- Conditional selection
+- Tracking indices of key values
+
+---
+
+### ⭐ Activity 02 – Rotate Array Left by 1 (Multiple Techniques)
+
+File: [src/activities/RotateLeft.java](src/activities/RotateLeft.java)
+
+Techniques shown:
+
+- Shifting-based rotation (core arrays lesson)
+- Using delete/insert logic
+- Reverse-based rotation (faster O(n) approach)
+
+> The reverse method is included for completeness but is not the primary focus of the Arrays module.
+
+---
+
 ## ▶ How to Run
 
 Clone the repository:
@@ -168,7 +231,7 @@ Clone the repository:
 git clone https://github.com/Maryam-Skaik/java-ds-lab-arrays.git
 ```
 
-Open in NetBeans, VS Code, or IntelliJ, then run Arrays.java.
+Open in NetBeans, VS Code, or IntelliJ, then run any file inside [src/examples/](src/examples/) or [src/activities/](src/activities/).
 
 ---
 
