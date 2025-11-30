@@ -1,5 +1,5 @@
 
-# 🚀 Java Data Structures Lab – Arrays Module
+<h1 align="center">🚀 Java Data Structures Lab – Arrays Module</h1>
 
 ![Course](https://img.shields.io/badge/DS%20Lab-Week%201-%23ff6f61)
 ![Language](https://img.shields.io/badge/Java-Source_Code-%23e57373)
