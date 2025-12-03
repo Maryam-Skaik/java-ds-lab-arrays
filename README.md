@@ -223,6 +223,14 @@ Techniques shown:
 
 ---
 
+## ▶ Activity Solutions Video
+
+Watch the Activity Solutions video for a detailed, step-by-step walkthrough of how to solve the activities from this module. The video explains the solutions for the problems covered in the Activities 01 & 02.
+
+[Activity Solutions – Arrays Lecture (Largest & Smallest Elements, Rotate Left)](https://youtu.be/f2lLdk3ZZKc?si=j0E_b314OcoUVfvB)
+
+---
+
 ## ▶ How to Run
 
 Clone the repository:
