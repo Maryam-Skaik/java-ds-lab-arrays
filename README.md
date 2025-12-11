@@ -92,15 +92,33 @@ address(arr[i]) = base_address + (i * element_size)
 
 ---
 
+### 🖼 Array Memory Visualization
+
+```mermaid
+flowchart LR
+    style A fill:#ffcccc,stroke:#ff0000,stroke-width:2px,color:#000000
+    style B fill:#ccffcc,stroke:#00cc00,stroke-width:2px,color:#000000
+    style C fill:#cce0ff,stroke:#0066ff,stroke-width:2px,color:#000000
+    style D fill:#fff0b3,stroke:#e6b800,stroke-width:2px,color:#000000
+    style E fill:#ffccff,stroke:#cc00cc,stroke-width:2px,color:#000000
+
+    A["arr[0]=1"] --> B["arr[1]=2"] --> C["arr[2]=5"] --> D["arr[3]=0"] --> E["arr[4]=0"]
+```
+
+---
+
 ### ✔ Manual Shifting for Insertion
 
 To insert at index i, elements from the end down to i must shift right:
 
-```bash
-Before:  [1, 2, 5, 0, 0]
-Insert 7 at index 1
-Shift →  [1, 2, 2, 5, 0]
-Result → [1, 7, 2, 5, 0]
+```mermaid
+flowchart LR
+    style Insert fill:#ffe0b3,stroke:#e68a00,stroke-width:2px,color:#000000
+    style ShiftRight fill:#ccffcc,stroke:#00cc00,stroke-width:2px,color:#000000
+    style Result fill:#cce0ff,stroke:#0066ff,stroke-width:2px,color:#000000
+
+    Insert["Insert 7 at index 1"] --> ShiftRight["Shift elements right from index 1"]
+    ShiftRight --> Result["Result: [1,7,2,5,0]"]
 ```
 
 ---
@@ -109,9 +127,14 @@ Result → [1, 7, 2, 5, 0]
 
 To delete at index i, elements shift left:
 
-```bash
-Before:  [1, 7, 2, 5, 0]
-After →  [1, 2, 5, 0, 0]
+```mermaid
+flowchart LR
+    style Delete fill:#ffcccc,stroke:#ff0000,stroke-width:2px,color:#000000
+    style ShiftLeft fill:#ccffcc,stroke:#00cc00,stroke-width:2px,color:#000000
+    style ResultDel fill:#cce0ff,stroke:#0066ff,stroke-width:2px,color:#000000
+
+    Delete["Delete element at index 1"] --> ShiftLeft["Shift elements left from index 1"]
+    ShiftLeft --> ResultDel["Result: [1,2,5,0,0]"]
 ```
 
 ---
